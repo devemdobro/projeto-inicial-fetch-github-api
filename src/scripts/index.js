@@ -17,7 +17,6 @@ document.getElementById('input-search').addEventListener('keyup', (e) => {
     }
 })
 
-
 function getUserProfile(userName){
 
     user(userName).then(userData => {
