@@ -44,4 +44,4 @@ async function getUserData(userName){
     screen.renderUser(user)
 }
 
-
+// endpoint events ---- https://api.github.com/users/luizalsc/events
