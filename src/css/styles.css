@@ -148,6 +148,10 @@ main {
   color: #fff
 }
 
+.container .profile-data .events ul li h4 {
+  font-weight: bold;
+}
+
 .container .profile-data.hide{
   display: none;
 }
