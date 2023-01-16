@@ -24,7 +24,22 @@ const screen = {
                 <ul>${repositoriesItems}</ul> 
             </div>`
          }
+
+         let eventsItems = ''
+         user.events.forEach(event => {
+            if(event.type === "CreateEvent" || event.type === "PushEvent"){
+                eventsItems += `<li><h4>${event.repo.name}:</h4><p>${event.payload.description}</p></li>`
+                }
+         })
+
+         this.userProfile.innerHTML =  
+            `<div class="events section">
+                <h2>Eventos</h2>
+                <ul>${eventsItems}</ul> 
+            </div>`
+
     },
+
     renderNotFound(){
         this.userProfile.innerHTML = '<h3>Usuário não encontrado</h3>'
     }
