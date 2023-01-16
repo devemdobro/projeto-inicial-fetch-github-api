@@ -134,21 +134,47 @@ main {
   justify-content: center;
 }
 
-.container .profile-data .repositories ul li a{
+.container .profile-data .repositories ul li{
   padding: 20px;
   border: 1px solid grey;  
   margin: 20px;
-  display: block;
   border-radius: 7px;
   transition: 0.3s ease-in-out;
 }
+
+.container .profile-data .repositories ul li a{
+  padding: 20px;
+  display: block;
+  transition: 0.3s ease-in-out;
+  border-radius: 7px;
+}
+
+.container .profile-data .repositories ul li p{
+  color: #fff;
+  padding: 5px;
+  display: inline-block;
+  background-color: rgb(170, 98, 237);
+  border-radius: 7px;
+}
+
 
 .container .profile-data .repositories ul li a:hover{
   background-color:hotpink;
   color: #fff
 }
 
-.container .profile-data .events ul li h4 {
+.container .profile-data .events{
+  background-color: rgb(234, 232, 232);
+  width: 80%;
+  padding: 20px;
+  border-radius: 7px;
+}
+
+.container .profile-data .events ul li{
+  line-height: 45px;
+}
+
+.container .profile-data .events ul li span {
   font-weight: bold;
 }
 

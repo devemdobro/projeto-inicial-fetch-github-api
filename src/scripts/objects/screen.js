@@ -14,12 +14,18 @@ const screen = {
 
          let repositoriesItems = ''
          user.repositories.forEach(repo => {
-            repositoriesItems += `<li><a href= "${repo.html_url}" target="_blank">${repo.name}</a></li>`
+            repositoriesItems += 
+            `<li>
+                <a href= "${repo.html_url}" target="_blank">${repo.name}</a>
+                <p>🍴${repo.forks}</p>
+                <p>⭐${repo.stargazers_count}</p>
+                <p>👀${repo.watchers}</p>
+                <p>👩‍💻${repo.language}</p>
+            </li>`
          })
 
          if(user.repositories.length > 0){
-            this.userProfile.innerHTML += 
-            `<div class="repositories section">
+            this.userProfile.innerHTML += `<div class="repositories section">
                 <h2>Repositórios</h2>
                 <ul>${repositoriesItems}</ul> 
             </div>`
@@ -28,12 +34,11 @@ const screen = {
          let eventsItems = ''
          user.events.forEach(event => {
             if(event.type === "CreateEvent" || event.type === "PushEvent"){
-                eventsItems += `<li><h4>${event.repo.name}:</h4><p>${event.payload.description}</p></li>`
+                eventsItems += `<li><span>${event.repo.name}:</span> ${event.payload.description}</li>`
                 }
          })
 
-         this.userProfile.innerHTML =  
-            `<div class="events section">
+         this.userProfile.innerHTML +=  `<div class="events section">
                 <h2>Eventos</h2>
                 <ul>${eventsItems}</ul> 
             </div>`

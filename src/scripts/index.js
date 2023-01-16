@@ -35,7 +35,6 @@ async function getUserData(userName){
     const repositoriesResponse = await getRepositories(userName)
     const userEventsResponse = await getUserEvents(userName)
 
-    console.log(userEventsResponse)
 
     if(userResponse.message === "Not Found"){
         screen.renderNotFound()
